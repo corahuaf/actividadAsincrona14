@@ -1,0 +1,26 @@
+<div class="w-1/4 mx-auto py-10 ">
+    <app-hijo *ngIf="showSuccess" [nombres]="nombres" [dni]="dni" [estado]="estado" ></app-hijo>
+    <div class="p-6 bg bg-gray-100 rounded-lg">
+        
+            <label class="text-xl text-blue-400">REGISTRO DE PERSONAS</label>
+            <div class=" pt-3">
+                <label for="nombre">Nombre:</label><br>
+                <input [(ngModel)]="nombres" type="text" id="nombre" class="rounded-lg border border-gray-300 p-1 w-full">
+            </div>
+            <div class=" pt-3">
+                <label for="dni">DNI:</label><br>
+                <input [(ngModel)]="dni" type="text" id="dni" class="rounded-lg border border-gray-300 p-1 w-full">
+            </div>
+            <div class=" pt-3">
+                <label for="estado">Estado civil:</label><br>
+                <select [(ngModel)]="estado" id="estado" class="rounded-lg border border-gray-300 p-1 w-full">
+                    <option >Seleccione una opcion</option>
+                    <option value="Soltero">Soltero</option>
+                    <option value="Casado">Casado</option>
+                </select>
+            </div>
+            <div class=" pt-3">
+                <button type="submit" (click)="onSubmit()" class="bg bg-green-400 px-3 py-1 rounded-lg text-white">Enviar</button>
+            </div>
+    </div>
+</div>
